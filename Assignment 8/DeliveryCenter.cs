@@ -128,6 +128,20 @@ namespace Assignment_8
             }
         }
 
+        public void PrintTrackingStatuses()
+        {
+
+            for (int i = 0; i < shipments.Length; i++)
+            {
+                if (shipments[i] is ITrackable trackable)
+                {
+                    Console.WriteLine(trackable.GetTrackingStatus());
+                }
+            }
+        }
+
+
+
         #endregion
     }
 
