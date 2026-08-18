@@ -23,6 +23,21 @@ namespace Assignment_8
 
         #endregion
 
+        #region Properties 
+
+        public override decimal EstimatedCost
+        {
+            get
+            {
+                return DeliveryFee + (Weight * 5);
+            }
+        }
+
+
+
+
+        #endregion
+
         #region Methods
 
         public override void PrintShipment()
