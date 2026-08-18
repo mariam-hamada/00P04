@@ -65,13 +65,7 @@ namespace Assignment_8
             set { _destination = value; }
         }
 
-        public virtual decimal EstimatedCost
-        {
-            get
-            {
-                return _deliveryFee + (_weight * 5);
-            }
-        }
+        public abstract decimal EstimatedCost { get; } 
 
         #endregion
 
@@ -125,17 +119,7 @@ namespace Assignment_8
             if (totalWeight > 0)
                 Weight = totalWeight;
         }
-        public virtual void PrintShipment()
-        {
-            Console.WriteLine(
-                $"Our Shipment details is:\n" +
-                $"1. Tracking code: {_trackingCode}\n" +
-                $"2. Description: {_description}\n" +
-                $"3. Weight: {_weight} kg\n" +
-                $"4. Delivery Fee: {_deliveryFee} EGP\n" +
-                $"5. Destination: {Destination.GetFullAddress()}\n" +
-                $"6. Estimated Cost: {EstimatedCost} EGP");
-        }
+        public abstract void PrintShipment();
 
         #endregion
     }
