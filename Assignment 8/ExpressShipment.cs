@@ -5,7 +5,7 @@ using System.Text;
 namespace Assignment_8
 {
 
-    internal class ExpressShipment : Shipment , ITrackable
+    internal class ExpressShipment : Shipment , ITrackable , IInsurable
     {
         #region Attributes
 
@@ -78,6 +78,11 @@ namespace Assignment_8
         public string GetTrackingStatus()
         {
             return $"Shipment {TrackingCode} is out for delivery.";
+        }
+
+        public decimal CalculateInsurance()
+        {
+            return EstimatedCost * 0.08m;
         }
 
         #endregion

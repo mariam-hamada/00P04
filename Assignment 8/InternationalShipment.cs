@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Assignment_8
 {
-    internal class InternationalShipment : Shipment , ITrackable
+    internal class InternationalShipment : Shipment , ITrackable , IInsurable
     {
 
         #region Attributes
@@ -98,6 +98,12 @@ namespace Assignment_8
         {
             return $"Shipment {TrackingCode} has been delivered.";
         }
+
+        public decimal CalculateInsurance()
+        {
+            return EstimatedCost * 0.12m;
+        }
+
         #endregion
     }
 }

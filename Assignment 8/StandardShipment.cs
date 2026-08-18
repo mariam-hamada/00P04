@@ -6,7 +6,7 @@ namespace Assignment_8
 {
     #region Three Shipment Types : StandardShipment
 
-    internal class StandardShipment : Shipment , ITrackable
+    internal class StandardShipment : Shipment , ITrackable , IInsurable
     {
         #region Constructor
 
@@ -55,6 +55,11 @@ namespace Assignment_8
         public string GetTrackingStatus()
         {
             return $"Shipment {TrackingCode} is Ready.";
+        }
+
+        public decimal  CalculateInsurance()
+        {
+            return EstimatedCost * 0.05m;
         }
 
         #endregion
