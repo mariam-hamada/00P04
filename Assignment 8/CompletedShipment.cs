@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Assignment_8
 {
-    internal sealed class CompletedShipment : Shipment
+    internal sealed class CompletedShipment
     {
         #region Constructor
 
@@ -14,7 +14,7 @@ namespace Assignment_8
             decimal weight,
             decimal deliveryFee,
             DeliveryAddress destination)
-            : base(trackingCode, description, weight, deliveryFee, destination)
+            
         {
         }
 
