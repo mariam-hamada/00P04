@@ -6,7 +6,7 @@ namespace Assignment_8
 {
     #region Three Shipment Types : StandardShipment
 
-    internal class StandardShipment : Shipment
+    internal class StandardShipment : Shipment , ITrackable
     {
         #region Constructor
 
@@ -50,6 +50,11 @@ namespace Assignment_8
             Console.WriteLine($"Weight        : {Weight} KG");
             Console.WriteLine($"Delivery Fee  : {DeliveryFee} EGP");
             Console.WriteLine($"Estimated Cost: {EstimatedCost} EGP");
+        }
+
+        public string GetTrackingStatus()
+        {
+            return $"Shipment {TrackingCode} is Ready.";
         }
 
         #endregion

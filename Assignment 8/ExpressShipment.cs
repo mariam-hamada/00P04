@@ -5,7 +5,7 @@ using System.Text;
 namespace Assignment_8
 {
 
-    internal class ExpressShipment : Shipment
+    internal class ExpressShipment : Shipment , ITrackable
     {
         #region Attributes
 
@@ -75,6 +75,10 @@ namespace Assignment_8
             Console.WriteLine($"Estimated Cost: {EstimatedCost} EGP");
         }
 
+        public string GetTrackingStatus()
+        {
+            return $"Shipment {TrackingCode} is out for delivery.";
+        }
 
         #endregion
     }

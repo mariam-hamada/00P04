@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Assignment_8
 {
-    internal class InternationalShipment : Shipment
+    internal class InternationalShipment : Shipment , ITrackable
     {
 
         #region Attributes
@@ -92,6 +92,11 @@ namespace Assignment_8
         {
             Console.WriteLine($"Customs Report for {DestinationCountry}");
             Console.WriteLine($"Customs Fee: {CustomsFee} EGP");
+        }
+
+        public string GetTrackingStatus()
+        {
+            return $"Shipment {TrackingCode} has been delivered.";
         }
         #endregion
     }
