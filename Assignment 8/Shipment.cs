@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Assignment_8
 {
-    internal class Shipment
+    internal abstract class Shipment
     {
         #region Attributes
 
